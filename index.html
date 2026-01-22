@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cotiza tu seguro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal {
+      background: #fff;
+      width: 90%;
+      max-width: 900px;
+      border-radius: 14px;
+      padding: 24px;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    h1 { color: #d71920; margin-bottom: 6px; }
+    h2 { font-size: 16px; font-weight: normal; margin-bottom: 24px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #f4f4f4;
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .card h3 { margin: 6px 0; }
+    .card p { font-size: 13px; margin-bottom: 12px; }
+
+    .btn {
+      display: inline-block;
+      background: #d71920;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      text-align: center;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="overlay" id="modal">
+  <div class="modal">
+    <div class="close" onclick="cerrar()">✕</div>
+
+    <h1>Bienvenido</h1>
+    <h2>Elige tu seguro y cotiza por WhatsApp</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>SOAT</h3>
+        <p>Entrega inmediata</p>
+        <a class="btn" href="https://wa.me/51930741880?text=Hola%20quiero%20cotizar%20mi%20SOAT" target="_blank">Cotizar</a>
+      </div>
+
+      <div class="card">
+        <h3>Seguro de Salud</h3>
+        <p>Atención en clínicas</p>
+        <a class="btn" href="https://wa.me/51930741880?text=Hola%20quiero%20información%20del%20Seguro%20de%20Salud" target="_blank">Cotizar</a>
+      </div>
+
+      <div class="card">
+        <h3>Seguro de Hogar</h3>
+        <p>Protege tu vivienda</p>
+        <a class="btn" href="https://wa.me/51930741880?text=Hola%20quiero%20cotizar%20un%20Seguro%20de%20Hogar" target="_blank">Cotizar</a>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      ✔ Atención inmediata &nbsp; ✔ Sin compromiso &nbsp; ✔ Asesoría personalizada
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function cerrar() {
+    document.getElementById('modal').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
+
