@@ -1,66 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Cotiza tu seguro</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>MAPFRE | Cotiza por WhatsApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #ffffff;
+    }
 
-    .overlay {
+    /* BOTON WHATSAPP FLOTANTE */
+    .whatsapp-float {
       position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 30px;
+      text-decoration: none;
+      z-index: 1000;
+    }
+
+    /* MODAL */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
     }
 
     .modal {
-      background: #fff;
-      width: 90%;
-      max-width: 900px;
-      border-radius: 14px;
+      background: #ffffff;
+      width: 95%;
+      max-width: 1100px;
+      border-radius: 16px;
       padding: 24px;
       position: relative;
     }
 
     .close {
       position: absolute;
-      top: 14px;
+      top: 12px;
       right: 16px;
       font-size: 22px;
       cursor: pointer;
     }
 
-    h1 { color: #d71920; margin-bottom: 6px; }
-    h2 { font-size: 16px; font-weight: normal; margin-bottom: 24px; }
+    .logo {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      max-width: 180px;
+    }
+
+    h1 {
+      color: #d71920;
+      text-align: center;
+      margin: 10px 0 4px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 15px;
+      color: #003a8f;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      gap: 16px;
     }
 
     .card {
-      background: #f4f4f4;
-      border-radius: 12px;
-      padding: 18px;
+      background: #f5f6f7;
+      border-radius: 14px;
+      padding: 16px;
       text-align: center;
+      border-top: 5px solid #f2a900;
     }
 
-    .card h3 { margin: 6px 0; }
-    .card p { font-size: 13px; margin-bottom: 12px; }
+    .card h3 {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
 
     .btn {
       display: inline-block;
       background: #d71920;
       color: #fff;
-      padding: 10px 18px;
+      padding: 8px 18px;
       border-radius: 20px;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #b5151b;
     }
 
     .footer {
@@ -74,48 +126,85 @@
 
 <body>
 
+<!-- BOTON FLOTANTE -->
+<a class="whatsapp-float" href="https://wa.me/51930741880" target="_blank">💬</a>
+
+<!-- MODAL -->
 <div class="overlay" id="modal">
   <div class="modal">
     <div class="close" onclick="cerrar()">✕</div>
 
-    <h1>Bienvenido</h1>
-    <h2>Elige tu seguro y cotiza por WhatsApp</h2>
+    <div class="logo">
+      <!-- CAMBIA EL LOGO SI QUIERES -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Mapfre_logo.svg">
+    </div>
+
+    <h1>BIENVENIDO A MAPFRE</h1>
+    <h2>ELIGE TU SEGURO Y COTIZA POR WHATSAPP</h2>
 
     <div class="grid">
 
-      <div class="card">
-        <h3>SOAT</h3>
-        <p>Entrega inmediata</p>
-        <a class="btn" href="https://wa.me/51930741880?text=Hola%20quiero%20cotizar%20mi%20SOAT" target="_blank">Cotizar</a>
+      <div class="card"><h3>Seguro Ahorro Devolución</h3>
+        <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20SEGURO%20AHORRO%20DEVOLUCION">Cotizar</a>
       </div>
 
-      <div class="card">
-        <h3>Seguro de Salud</h3>
-        <p>Atención en clínicas</p>
-        <a class="btn" href="https://wa.me/51930741880?text=Hola%20quiero%20información%20del%20Seguro%20de%20Salud" target="_blank">Cotizar</a>
+      <div class="card"><h3>Seguro Vehicular</h3>
+        <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20MI%20SEGURO%20VEHICULAR">Cotizar</a>
       </div>
 
-      <div class="card">
-        <h3>Seguro de Hogar</h3>
-        <p>Protege tu vivienda</p>
-        <a class="btn" href="https://wa.me/51930741880?text=Hola%20quiero%20cotizar%20un%20Seguro%20de%20Hogar" target="_blank">Cotizar</a>
+      <div class="card"><h3>SOAT</h3>
+        <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20MI%20SOAT">Cotizar</a>
+      </div>
+
+      <div class="card"><h3>Seguro de Hogar</h3>
+        <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20MI%20SEGURO%20DE%20HOGAR">Cotizar</a>
+      </div>
+
+      <div class="card"><h3>Seguro de Inversión</h3>
+        <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20MI%20SEGURO%20DE%20INVERSION">Cotizar</a>
+      </div>
+
+      <div class="card"><h3>Fondo Universitario</h3>
+        <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20MI%20SEGURO%20DE%20FONDO%20UNIVERSITARIO">Cotizar</a>
+      </div>
+
+      <div class="card"><h3>Vida Ley</h3>
+        <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20SEGURO%20VIDA%20LEY">Cotizar</a>
+      </div>
+
+      <div class="card"><h3>Seguro de Vida</h3>
+        <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20SEGURO%20DE%20VIDA">Cotizar</a>
+      </div>
+
+      <div class="card"><h3>Riesgos Generales</h3>
+        <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20SEGURO%20DE%20RIESGOS%20GENERALES">Cotizar</a>
+      </div>
+
+      <div class="card"><h3>SCTR</h3>
+        <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20SCTR">Cotizar</a>
+      </div>
+
+      <div class="card"><h3>Seguro de Salud</h3>
+        <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20SEGURO%20DE%20SALUD">Cotizar</a>
       </div>
 
     </div>
 
     <div class="footer">
-      ✔ Atención inmediata &nbsp; ✔ Sin compromiso &nbsp; ✔ Asesoría personalizada
+      ✔ Atención inmediata | ✔ Asesoría personalizada | ✔ MAPFRE
     </div>
-
   </div>
 </div>
 
 <script>
+  setTimeout(() => {
+    document.getElementById("modal").style.display = "flex";
+  }, 3000);
+
   function cerrar() {
-    document.getElementById('modal').style.display = 'none';
+    document.getElementById("modal").style.display = "none";
   }
 </script>
 
 </body>
 </html>
-
