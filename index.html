@@ -2,190 +2,105 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>MAPFRE | Cotiza por WhatsApp</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotiza tu Seguro | MAPFRE</title>
 
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #ffffff;
-    }
-
-    /* BOTON WHATSAPP */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      text-decoration: none;
-      z-index: 1000;
-    }
-
-    /* MODAL */
-    .overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-    }
-
-    .modal {
-      background: #ffffff;
-      width: 95%;
-      max-width: 900px;
-      border-radius: 16px;
-      padding: 24px;
-      position: relative;
-    }
-
-    .close {
-      position: absolute;
-      top: 12px;
-      right: 16px;
-      font-size: 22px;
-      cursor: pointer;
-    }
-
-    .logo {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
       text-align: center;
-      margin-bottom: 10px;
     }
 
-    .logo img {
-      max-width: 170px;
+    header {
+      background: linear-gradient(135deg, #d71920, #b51218);
+      color: white;
+      padding: 35px 20px;
     }
 
     h1 {
-      color: #d71920;
-      text-align: center;
-      margin: 10px 0 4px;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 15px;
-      color: #003a8f;
-      margin-bottom: 20px;
-      font-weight: normal;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-    }
-
-    .card {
-      background: #f5f6f7;
-      border-radius: 14px;
-      padding: 18px;
-      text-align: center;
-      border-top: 5px solid #f2a900;
-    }
-
-    .card h3 {
-      font-size: 15px;
-      margin-bottom: 12px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #d71920;
-      color: #fff;
-      padding: 8px 20px;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 13px;
+      margin: 0;
+      font-size: 30px;
       font-weight: bold;
     }
 
-    .btn:hover {
-      background: #b5151b;
+    h2 {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: normal;
     }
 
-    .footer {
-      margin-top: 20px;
-      font-size: 12px;
-      text-align: center;
-      color: #555;
+    .container {
+      padding: 30px 20px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 420px;
+      margin: 14px auto;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      background-color: #005baa;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #003f7d;
+      transform: scale(1.03);
+    }
+
+    footer {
+      margin: 30px 0 15px;
+      font-size: 14px;
+      color: #666;
     }
   </style>
 </head>
 
 <body>
 
-<!-- BOTON WHATSAPP -->
-<a class="whatsapp-float" href="https://wa.me/51930741880" target="_blank">💬</a>
+<header>
+  <h1>BIENVENIDO A MAPFRE</h1>
+  <h2>Elige tu seguro y cotiza por WhatsApp</h2>
+</header>
 
-<!-- MODAL -->
-<div class="overlay" id="modal">
-  <div class="modal">
-    <div class="close" onclick="cerrar()">✕</div>
+<div class="container">
 
-    <div class="logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Mapfre_logo.svg">
-    </div>
+  <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20MI%20SOAT%20-%20OBLIGATORIO">
+    🛵 SOAT · Obligatorio
+  </a>
 
-    <h1>BIENVENIDO A MAPFRE</h1>
-    <h2>ELIGE TU SEGURO Y COTIZA POR WHATSAPP</h2>
+  <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20VIDA%20LEY%20-%20LABORAL">
+    👷‍♂️ VIDA LEY · Laboral
+  </a>
 
-    <div class="grid">
+  <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20SCTR%20-%20PROTECCION">
+    🏥 SCTR · Protección
+  </a>
 
-      <div class="card">
-        <h3>SOAT</h3>
-        <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20MI%20SOAT">Cotizar</a>
-      </div>
+  <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20VIDA%20SALUD%20-%20BIENESTAR">
+    ❤️ VIDA SALUD · Bienestar
+  </a>
 
-      <div class="card">
-        <h3>Vida Ley</h3>
-        <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20SEGURO%20VIDA%20LEY">Cotizar</a>
-      </div>
+  <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20VIDA%20CON%20DEVOLUCION%20-%20AHORRO">
+    💰 VIDA DEVOLUCIÓN · Ahorro
+  </a>
 
-      <div class="card">
-        <h3>SCTR</h3>
-        <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20SCTR">Cotizar</a>
-      </div>
-
-      <div class="card">
-        <h3>Vida Salud</h3>
-        <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20SEGURO%20DE%20SALUD">Cotizar</a>
-      </div>
-
-      <div class="card">
-        <h3>Vida Devolución</h3>
-        <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20SEGURO%20VIDA%20DEVOLUCION">Cotizar</a>
-      </div>
-
-    </div>
-
-    <div class="footer">
-      ✔ Atención inmediata | ✔ Asesoría personalizada | ✔ MAPFRE
-    </div>
-
-  </div>
 </div>
 
-<script>
-  setTimeout(() => {
-    document.getElementById("modal").style.display = "flex";
-  }, 3000);
-
-  function cerrar() {
-    document.getElementById("modal").style.display = "none";
-  }
-</script>
+<footer>
+  © MAPFRE | Cotizaciones por WhatsApp
+</footer>
 
 </body>
 </html>
