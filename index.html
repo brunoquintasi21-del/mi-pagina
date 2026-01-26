@@ -3,144 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cotiza tu Seguro | MAPFRE</title>
-
+  <title>Bienvenido a MAPFRE</title>
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: #f4f6f8;
+      margin: 0;
+      padding: 0;
       text-align: center;
     }
-
     header {
-      background: linear-gradient(135deg, #d71920, #b51218);
+      background: #d71920; /* Rojo MAPFRE */
       color: white;
-      padding: 25px 20px 35px;
+      padding: 30px 15px;
     }
-
-    .logo {
-      max-width: 160px;
-      margin-bottom: 15px;
-    }
-
-    h1 {
+    header h1 {
       margin: 0;
-      font-size: 28px;
-      font-weight: bold;
+      font-size: 32px;
     }
-
-    h2 {
+    header p {
       margin-top: 10px;
-      font-size: 17px;
-      font-weight: normal;
+      font-size: 18px;
     }
-
     .container {
-      padding: 30px 20px;
+      padding: 30px 15px;
+      max-width: 900px;
+      margin: auto;
     }
-
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
     .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      max-width: 420px;
-      margin: 14px auto;
-      padding: 16px;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-decoration: none;
+      color: #333;
       font-size: 18px;
       font-weight: bold;
-      color: white;
-      background-color: #005baa;
-      border-radius: 10px;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      transition: transform 0.2s, background 0.3s;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-
-    .btn:hover {
-      background-color: #003f7d;
-      transform: scale(1.03);
-    }
-
-    footer {
-      margin: 30px 0 20px;
+    .btn span {
+      display: block;
       font-size: 14px;
+      font-weight: normal;
+      margin-top: 8px;
       color: #666;
     }
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50px;
-      padding: 14px 18px;
-      font-size: 16px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      z-index: 1000;
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
     }
-
-    .whatsapp-float:hover {
-      background-color: #1ebe5d;
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
     }
   </style>
 </head>
-
 <body>
 
 <header>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Mapfre_logo.svg/512px-Mapfre_logo.svg.png" 
-       alt="MAPFRE" class="logo">
-
   <h1>BIENVENIDO A MAPFRE</h1>
-  <h2>Elige tu seguro y cotiza por WhatsApp</h2>
+  <p>Elige tu seguro y cotiza por WhatsApp</p>
 </header>
 
 <div class="container">
+  <div class="buttons">
 
-  <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20MI%20SEGURO%20VEHICULAR%20-%20TODO%20RIESGO">
-    🚗 SEGURO VEHICULAR · Todo Riesgo
-  </a>
+    <a class="btn" href="https://wa.me/51930741880?text=Hola%2C%20quiero%20cotizar%20Seguro%20Vehicular" target="_blank">
+      🚗 Seguro Vehicular
+      <span>Protección total para tu vehículo</span>
+    </a>
 
-  <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20MI%20SOAT%20-%20OBLIGATORIO">
-    🛵 SOAT · Obligatorio
-  </a>
+    <a class="btn" href="https://wa.me/51930741880?text=Hola%2C%20quiero%20cotizar%20mi%20SOAT" target="_blank">
+      🛵 SOAT
+      <span>Seguro obligatorio y respaldo inmediato</span>
+    </a>
 
-  <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20VIDA%20LEY%20-%20LABORAL">
-    👷‍♂️ VIDA LEY · Laboral
-  </a>
+    <a class="btn" href="https://wa.me/51930741880?text=Hola%2C%20quiero%20cotizar%20Vida%20Ley" target="_blank">
+      👷‍♂️ Vida Ley
+      <span>Cumple la ley y protege a tu equipo</span>
+    </a>
 
-  <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20SCTR%20-%20PROTECCION">
-    🏥 SCTR · Protección
-  </a>
+    <a class="btn" href="https://wa.me/51930741880?text=Hola%2C%20quiero%20cotizar%20SCTR" target="_blank">
+      🏥 SCTR
+      <span>Seguridad para trabajos de riesgo</span>
+    </a>
 
-  <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20VIDA%20SALUD%20-%20BIENESTAR">
-    ❤️ VIDA SALUD · Bienestar
-  </a>
+    <a class="btn" href="https://wa.me/51930741880?text=Hola%2C%20quiero%20cotizar%20Vida%20Salud" target="_blank">
+      ❤️ Vida Salud
+      <span>Cuidado médico y tranquilidad</span>
+    </a>
 
-  <a class="btn" href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20VIDA%20CON%20DEVOLUCION%20-%20AHORRO">
-    💰 VIDA DEVOLUCIÓN · Ahorro
-  </a>
+    <a class="btn" href="https://wa.me/51930741880?text=Hola%2C%20quiero%20cotizar%20Vida%20con%20Devoluci%C3%B3n" target="_blank">
+      💰 Vida con Devolución
+      <span>Protección que también devuelve</span>
+    </a>
 
+  </div>
 </div>
 
 <footer>
-  © MAPFRE | Asesoría y cotizaciones por WhatsApp
+  © 2026 MAPFRE – Asesoría personalizada por WhatsApp
 </footer>
-
-<a class="whatsapp-float" 
-   href="https://wa.me/51930741880?text=HOLA%20QUIERO%20COTIZAR%20UN%20SEGURO" 
-   target="_blank">
-  💬 WhatsApp
-</a>
 
 </body>
 </html>
